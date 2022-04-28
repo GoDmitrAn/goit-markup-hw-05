@@ -12,6 +12,8 @@
   --icon-color: #afb1b8;
   --action-duration: 250ms;
   --action-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --doing-item-overlay: rgba(47, 48, 58, 0.8);
+  --works-overlay: rgba(33, 150, 243, 0.9);
 }
 /* цвет  вторичный   #212121 */
 /* цвет  основной   #757575 */
@@ -262,6 +264,26 @@ img {
 .doing-item:not(:last-child) {
   margin-right: 30px;
 }
+.doing-item-thumb {
+  position: relative;
+}
+.doing-item-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 27px 0;
+  background: var(--doing-item-overlay);
+}
+.doing-tite {
+  color: var(--text-overall-color);
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 /* ***********************team****************** */
 .team-list .title {
   color: var(--primary-text-color);
@@ -479,6 +501,7 @@ img {
 .works-item-link:hover {
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%), 0px 4px 4px rgb(0 0 0 / 6%),
     1px 4px 6px rgb(0 0 0 / 16%);
+  /* transform: translatey(0); */
 }
 .works-title-container {
   padding: 20px 24px;
@@ -497,6 +520,29 @@ img {
 .works-description {
   font-size: 16px;
   line-height: 1.9;
+}
+.works-img-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.img-thumb-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform var(--action-duration) var(--action-timing-function);
+
+  padding: 63px 24px;
+  background-color: var(--works-overlay);
+}
+.thumb-text-overlay {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-overall-color);
+}
+.works-item-link:hover .img-thumb-overlay {
+  transform: translateY(0);
 }
 /* ---------------------hiiden element---------------- */
 .visually-hidden {
