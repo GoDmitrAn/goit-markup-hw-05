@@ -267,22 +267,25 @@ img {
 .doing-item-thumb {
   position: relative;
 }
-.doing-item-text {
+
+.doing-tite {
   position: absolute;
   left: 0;
   bottom: 0;
-  text-align: center;
+
+  display: flex;
   width: 100%;
-  padding: 27px 0;
-  background: var(--doing-item-overlay);
-}
-.doing-tite {
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+
   color: var(--text-overall-color);
   font-size: 14px;
   line-height: 1.14;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  background: var(--doing-item-overlay);
 }
 /* ***********************team****************** */
 .team-list .title {
